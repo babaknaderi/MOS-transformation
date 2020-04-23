@@ -1,4 +1,4 @@
-function transformed_rank_order = transform_mos(mos, ci)
+function corrected_rank = transform_mos(mos, ci)
 % TRANSFORM_MOS Transform the MOS values given 95% Condifence Intervals, so
 % two similar MOS values get a same rank although their MOS values are not
 % equivalent.
@@ -97,6 +97,7 @@ function transformed_rank_order = transform_mos(mos, ci)
     unsorted  = 1:length(mos_order);
     new_ind(mos_order) =  unsorted;
     transformed_rank_order= rank(new_ind);
+    corrected_rank = tiedrank(transformed_rank_order);
 end
 
 function [is_tied] = isTiedRank(mos_a,ci_a,mos_b,ci_b)

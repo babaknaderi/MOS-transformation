@@ -15,14 +15,23 @@ in the quality of experience domain.
 
 ## Code
 How to use?
-tba
 
+``` python
+    mos = [10, 6, 5.5]
+    ci = [4, 2, 0.2]
+    t = transform_mos(mos, ci)
+    #  expected_rank = [3, 1.5, 1.5]
+```
+    
+
+    
+    
 ## Contact
 
 Babak Naderi, babak.naderi[at]tu-berlin.de
 
 ## Citation
-Naderi B, Möller S. [Transformation of Mean Opinion Scores to AvoidMisleading of Ranked based Statistical Techniques](https://arxiv) 
+Naderi B, Moeller S. [Transformation of Mean Opinion Scores to AvoidMisleading of Ranked based Statistical Techniques](https://arxiv) 
 2020 Twelfth International Workshop on Quality of Multimedia Experience (QoMEX). IEEE, 2020.
 
 
@@ -35,4 +44,4 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFT
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
