@@ -19,8 +19,8 @@ We provide implementation of our transformation method for MATLAB, Python and R.
 ### MARLAB
 Add the directory `src/MATLAB` to your MATLAB search path.
 ``` MATLAB
-mos = [10, 7];
-ci = [4, 2];
+mos = [3.8,3.1];
+ci = [0.8, 0.6];
 expected_rank = [1.5,1.5];
 new_rank = transform_mos(mos,ci); 
 ```
@@ -35,8 +35,8 @@ Input the corresponding function and use it:
 ``` python
     from subjective_test.utilities import transform_mos
     
-    mos = [10, 6, 5.5]
-    ci = [4, 2, 0.2]
+    mos = [4.5, 3, 2.5]
+    ci = [0.5, 0.2, 0.5]
     t = transform_mos(mos, ci)
     #  expected_rank = [3, 1.5, 1.5]
 ```

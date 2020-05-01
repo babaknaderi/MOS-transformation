@@ -12,48 +12,48 @@ def test_basic_transform():
 def test_figure_3():
     # case a
     print('case a')
-    mos = [10, 5]
-    ci = [2, 2]
+    mos = [4, 2]
+    ci = [0.5, 0.5]
     expected_rank = [2, 1]
     t = transform_mos(mos, ci)
     assert (t== expected_rank).all(), print(t)
 
     # case b
     print('case b')
-    mos = [10, 6]
-    ci = [3, 2]
+    mos = [4, 3]
+    ci = [0.6, 0.6]
     expected_rank = [2, 1]
     t = transform_mos(mos, ci)
     assert (t == expected_rank).all(), print(t)
 
     #  case c
     print('case c')
-    mos = [10, 7]
-    ci = [4, 2]
+    mos = [4, 3.5]
+    ci = [0.6, 0.2]
     expected_rank = [1.5, 1.5]
     t = transform_mos(mos, ci)
     assert (t == expected_rank).all(), print(t)
 
     # case d
     print('case d')
-    mos = [10, 8, 5.5]
-    ci = [4, 3, 1]
+    mos = [4, 3.8, 3.3]
+    ci = [0.6, 0.6, 0.2]
     expected_rank = [2.5, 2.5, 1]
     t = transform_mos(mos, ci)
     assert (t == expected_rank).all(), print(t)
 
     #  case e
     print('case e')
-    mos = [10, 6, 5.5]
-    ci = [4, 2, 0.2]
+    mos = [4, 3.5, 3.3]
+    ci = [0.6, 0.3, 0.2]
     expected_rank = [3, 1.5, 1.5]
     t = transform_mos(mos, ci)
     assert (t == expected_rank).all(), print(t)
 
     #  case f
     print('case f')
-    mos = [10, 7, 9]
-    ci = [4, 2, 0.2]
+    mos = [4, 3.5, 3.3]
+    ci = [0.8, 0.4, 0.3]
     expected_rank = [2, 2, 2]
     t = transform_mos(mos, ci)
     assert (t == expected_rank).all(), print(t)
