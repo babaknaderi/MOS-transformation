@@ -98,8 +98,3 @@ def is_tied_set_valid(mos_set, ci_set):
     return True
 
 
-if __name__ == '__main__':
-    m = [10, 8, 5.5]
-    c = [4, 3, 1]
-    new_rank = transform_mos(m, c)
-    print(new_rank)

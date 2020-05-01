@@ -1,5 +1,5 @@
 from subjective_test.utilities import transform_mos
-
+import pandas as pd
 
 def test_basic_transform():
     m = [1.1, 4, 5, 2, 3, 1.2, 4]
@@ -68,7 +68,19 @@ def test_final():
     assert (t == expected_rank).all(), print(t)
 
 
+def test_df():
+    mos =[1,2,2.1,3.1,3.2,4,4.5]
+    ci = [0.1, 0.2, 0.2, 0.3, 0.3, 0.1, 0.1]
+    d = [5,6,4,2,3,1,0]
+    df = pd.DataFrame({'mos': mos, 'ci': ci, 'd':d})
+    df = df.sort_values(by=['d'])
+    print(df)
+    t = transform_mos(df['mos'], df['ci'])
+    print(t)
+
+
 if __name__ == "__main__":
+    test_df()
     test_basic_transform()
     test_figure_3()
     test_final()
