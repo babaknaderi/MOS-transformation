@@ -46,7 +46,7 @@ Input the corresponding function and use it:
 Babak Naderi, babak.naderi[at]tu-berlin.de
 
 ## Citation
-Naderi B, Möller S. [Transformation of Mean Opinion Scores to AvoidMisleading of Ranked based Statistical Techniques](https://arxiv) 
+Naderi B, Möller S. [Transformation of Mean Opinion Scores to AvoidMisleading of Ranked based Statistical Techniques](https://arxiv.org/abs/2004.11490) 
 2020 Twelfth International Workshop on Quality of Multimedia Experience (QoMEX). IEEE, 2020.
 
 

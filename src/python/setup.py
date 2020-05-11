@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="subjective_test",
-    version="0.0.2",
+    version="0.0.4",
     author="Babak Naderi",
     author_email="bnaderi9@gmail.com",
     description="Transforming the Mean Opinion Scores (MOS) values given their 95% Confidence Intervals to safely use "

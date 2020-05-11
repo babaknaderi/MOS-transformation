@@ -8,7 +8,6 @@
 """
 
 import pandas as pd
-import numpy as np
 
 def transform_mos(mos, ci):
     """
@@ -21,7 +20,6 @@ def transform_mos(mos, ci):
     if len(mos) != len(ci):
         raise ValueError("MOS and CI should have a same size")
     df = pd.DataFrame({'mos': mos, 'ci': ci})
-    #df['org_ind'] = df.index
     df['mos_rank'] = df['mos'].rank()
     df = df.sort_values(by=['mos'])
     df.reset_index(inplace=True)
