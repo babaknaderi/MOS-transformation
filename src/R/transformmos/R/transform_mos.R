@@ -12,6 +12,8 @@
 #' transform_mos(m,c)
 #'
 #' @export transform_mos
+#' @importFrom utils head
+
 
 transform_mos<-function(mos, ci)
 {
@@ -65,8 +67,8 @@ transform_mos<-function(mos, ci)
           tied_set_mos<-head( tied_set_mos, -1)
           tied_set_ci<-head( tied_set_ci, -1)
           # %check if last element of set1 want to be in set2
-          while (length(tied_set_mos) > 1 &
-                 abs(tmp_mos[1] - tied_set_mos[length(tied_set_mos)]) < abs(tied_set_mos[length(tied_set_mos)-1]-tied_set_mos[length(tied_set_mos)]) &
+          while (length(tied_set_mos) > 1 &&
+                 abs(tmp_mos[1] - tied_set_mos[length(tied_set_mos)]) < abs(tied_set_mos[length(tied_set_mos)-1]-tied_set_mos[length(tied_set_mos)]) &&
                  is_tied_set_valid( c(tied_set_mos[length(tied_set_mos)], tmp_mos), c(tied_set_ci[length(tied_set_ci)],  tmp_ci))){
 
             tmp_mos <-  c(tied_set_mos[length(tied_set_mos)], tmp_mos)
@@ -76,7 +78,7 @@ transform_mos<-function(mos, ci)
           }
           # now everyone in the tmp_mos should get rank(i)
           for (j in 1:length(tmp_mos)){
-            new_ranks[i-j] <- new_ranks[i]
+            new_ranks[i-j+1] <- new_ranks[i]
           }
           tied_set_mos <- tmp_mos
           tied_set_ci <- tmp_ci
@@ -100,10 +102,10 @@ transform_mos<-function(mos, ci)
 
 is_tied_rank <- function(mos_a, ci_a, mos_b, ci_b)
 {
-  if (round(mos_a, 2) >= round(mos_b - ci_b, 2) & round(mos_a, 2) <= round(mos_b + ci_b, 2)){
+  if (round(mos_a, 2) >= round(mos_b - ci_b, 2) && round(mos_a, 2) <= round(mos_b + ci_b, 2)){
     return(TRUE)
   }
-  if (round(mos_b, 2) >= round(mos_a - ci_a, 2) & round(mos_b, 2) <= round(mos_a + ci_a, 2)){
+  if (round(mos_b, 2) >= round(mos_a - ci_a, 2) && round(mos_b, 2) <= round(mos_a + ci_a, 2)){
     return(TRUE)
   }
   return(FALSE)
@@ -113,16 +115,19 @@ is_tied_rank <- function(mos_a, ci_a, mos_b, ci_b)
 is_tied_set_valid <-function(mos_set, ci_set)
 {
   l = length(mos_set)
-  for (i in l:0){
-    for (j in i-1:0){
+  for (i in l:1){
+    for (j in (i-1):1){
+      if (j<1){
+        next
+      }
       if (!is_tied_rank(mos_set[i], ci_set[i], mos_set[j], ci_set[j])){
         return(FALSE)
       }
-
     }
   }
   return(TRUE)
 }
+
 
 
 

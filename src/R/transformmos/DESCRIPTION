@@ -1,11 +1,15 @@
 Package: transformmos
 Type: Package
-Title: Transform MOS values to be robust for using Rank based statistics
+Title: Transform MOS Values to be Robust for using Rank Based Statistics
 Version: 0.1.0
-Author: Dr. Babak NAderi
-Maintainer: Dr. Babak Naderi <bnaderi9@gmail.com>
-License: MIT License
+Authors@R: person("Babak", "Naderi", role = c("cre","aut","cph"),
+                     email = "bnaderi9@gmail.com")
+Author: Babak Naderi [cre,aut,cph]
+Maintainer: Babak Naderi <bnaderi9@gmail.com>
+License: MIT + file LICENSE
 Description: Implementation of MOS-transformation to be used with Rank based statistical techniques.
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
+Imports:
+  utils
