@@ -26,7 +26,7 @@ new_rank = transform_mos(mos,ci);
 ```
 
 ### Python
-Installation
+You can use the source code (`src/pythonR`) or install the package from **pypi**
 ``` bash
 pip install subjective-test
 ```
@@ -41,13 +41,29 @@ Input the corresponding function and use it:
     #  expected_rank = [3, 1.5, 1.5]
 ```
 
+### R
+
+You can use the source code (`src/R`) or install the package from **CRAN**:
+``` bash
+install.packages("transformmos")
+```
+Input the corresponding function and use it:
+
+``` R
+    library(transformmos)
+    
+    mos <- c(1.1, 4, 5, 2, 3, 1.2, 4)
+    ci <- c(0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1)
+    new_rank <- transform_mos(mos,ci)
+    #  expected <- c(1.5, 5.5, 7, 3, 4, 1.5, 5.5)
+```
 ## Contact
 
-Babak Naderi, babak.naderi[at]tu-berlin.de
+Babak Naderi, babak.naderi[at]tu-berlin.de | bnaderi9[at]gmail.com
 
 ## Citation
-Naderi B, Möller S. [Transformation of Mean Opinion Scores to Avoid Misleading of Ranked based Statistical Techniques](https://arxiv.org/abs/2004.11490) 
-2020 Twelfth International Workshop on Quality of Multimedia Experience (QoMEX). IEEE, 2020.
+_Naderi B, Möller S_. [Transformation of Mean Opinion Scores to Avoid Misleading of Ranked based Statistical Techniques](https://arxiv.org/abs/2004.11490) 
+Twelfth International Workshop on Quality of Multimedia Experience (QoMEX). IEEE, 2020.
 
 
 ## License

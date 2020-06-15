@@ -4,10 +4,10 @@ Title: Transform MOS Values to be Robust for using Rank Based Statistics
 Version: 0.1.0
 Authors@R: person("Babak", "Naderi", role = c("cre","aut","cph"),
                      email = "bnaderi9@gmail.com")
-Author: Babak Naderi [cre,aut,cph]
+Author: Babak Naderi [cre, aut, cph]
 Maintainer: Babak Naderi <bnaderi9@gmail.com>
 License: MIT + file LICENSE
-Description: Implementation of MOS-transformation to be used with Rank based statistical techniques.
+Description: Implementation of the transformation of the Mean Opinion Scores (MOS) to be used before applying the rank based statistical techniques. The method and its necessity is described in: Babak Naderi, Sebastian Möller (2020) <arXiv:2004.11490>.
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.0
