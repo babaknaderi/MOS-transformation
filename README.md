@@ -16,7 +16,7 @@ in the quality of experience domain.
 ## Code
 We provide implementation of our transformation method for MATLAB, Python and R.
 
-### MARLAB
+### MATLAB
 Add the directory `src/MATLAB` to your MATLAB search path.
 ``` MATLAB
 mos = [3.8,3.1];
